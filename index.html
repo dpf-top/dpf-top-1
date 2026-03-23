@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
- 
+
     <style>
         /* ================================================================
            RESET & CSS VARIABLES
@@ -18,7 +18,7 @@
             padding: 0;
             box-sizing: border-box;
         }
- 
+
         :root {
             --bg-deep: #0d0f13;
             --bg-card: #161920;
@@ -26,37 +26,37 @@
             --bg-surface: #111318;
             --border-subtle: rgba(255,255,255,0.06);
             --border-glow: rgba(0, 168, 255, 0.2);
- 
+
             --text-primary: #eef1f6;
             --text-secondary: #8b92a5;
             --text-muted: #5a6178;
- 
+
             --accent-blue: #00a8ff;
             --accent-blue-dim: rgba(0, 168, 255, 0.12);
             --accent-blue-glow: rgba(0, 168, 255, 0.35);
             --accent-orange: #ff6b2c;
             --accent-orange-hover: #ff8652;
             --accent-green: #2dd4a0;
- 
+
             --font-display: 'Outfit', sans-serif;
             --font-body: 'DM Sans', sans-serif;
- 
+
             --radius-sm: 8px;
             --radius-md: 14px;
             --radius-lg: 20px;
- 
+
             --shadow-card: 0 4px 24px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.25);
             --shadow-glow: 0 0 40px rgba(0, 168, 255, 0.08);
- 
+
             --max-w: 1200px;
             --section-py: clamp(64px, 10vw, 120px);
         }
- 
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 68px;
         }
- 
+
         body {
             font-family: var(--font-body);
             background: var(--bg-deep);
@@ -66,14 +66,14 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
- 
+
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
- 
- 
+
+
         /* ================================================================
            UTILITY CLASSES
            ================================================================ */
@@ -82,11 +82,11 @@
             margin: 0 auto;
             padding: 0 20px;
         }
- 
+
         .section {
             padding: var(--section-py) 0;
         }
- 
+
         .section-label {
             font-family: var(--font-display);
             font-size: 0.78rem;
@@ -96,7 +96,7 @@
             color: var(--accent-blue);
             margin-bottom: 12px;
         }
- 
+
         .section-title {
             font-family: var(--font-display);
             font-size: clamp(1.6rem, 4vw, 2.6rem);
@@ -104,23 +104,23 @@
             line-height: 1.2;
             margin-bottom: 16px;
         }
- 
+
         .section-subtitle {
             color: var(--text-secondary);
             font-size: clamp(0.9rem, 2.5vw, 1.05rem);
             max-width: 620px;
             line-height: 1.75;
         }
- 
+
         .section-header {
             text-align: center;
             margin-bottom: clamp(32px, 6vw, 56px);
         }
- 
+
         .section-header .section-subtitle {
             margin: 0 auto;
         }
- 
+
         /* Scroll reveal animation */
         .reveal {
             opacity: 0;
@@ -132,8 +132,8 @@
             opacity: 1;
             transform: translateY(0);
         }
- 
- 
+
+
         /* ================================================================
            NAVIGATION
            ================================================================ */
@@ -149,7 +149,7 @@
             border-bottom: 1px solid var(--border-subtle);
             transition: background 0.3s;
         }
- 
+
         .nav-inner {
             max-width: var(--max-w);
             margin: 0 auto;
@@ -159,7 +159,7 @@
             justify-content: space-between;
             height: 64px;
         }
- 
+
         .nav-logo {
             font-family: var(--font-display);
             font-weight: 800;
@@ -172,7 +172,7 @@
         .nav-logo span {
             color: var(--accent-blue);
         }
- 
+
         .nav-links {
             display: flex;
             gap: 28px;
@@ -191,7 +191,7 @@
         .nav-links a:hover {
             color: var(--text-primary);
         }
- 
+
         .nav-cta {
             background: var(--accent-orange);
             color: #fff;
@@ -209,7 +209,7 @@
             background: var(--accent-orange-hover);
             transform: translateY(-1px);
         }
- 
+
         /* Hamburger */
         .hamburger {
             display: none;
@@ -232,7 +232,7 @@
         .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
- 
+
         /* Mobile nav fullscreen overlay */
         .mobile-nav {
             display: none;
@@ -266,8 +266,8 @@
             padding: 14px 32px;
             font-size: 1rem;
         }
- 
- 
+
+
         /* ================================================================
            HERO SECTION
            ================================================================ */
@@ -300,19 +300,19 @@
             background: radial-gradient(circle, rgba(255,107,44,0.04) 0%, transparent 70%);
             pointer-events: none;
         }
- 
+
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 48px;
             align-items: center;
         }
- 
+
         .hero-content {
             position: relative;
             z-index: 2;
         }
- 
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -330,7 +330,7 @@
         .hero-badge svg {
             flex-shrink: 0;
         }
- 
+
         .hero h1 {
             font-family: var(--font-display);
             font-size: clamp(1.7rem, 4.5vw, 3.2rem);
@@ -345,7 +345,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
- 
+
         .hero-text {
             color: var(--text-secondary);
             font-size: clamp(0.92rem, 2.5vw, 1.06rem);
@@ -353,14 +353,14 @@
             margin-bottom: 28px;
             max-width: 520px;
         }
- 
+
         .hero-buttons {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
             margin-bottom: 16px;
         }
- 
+
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -383,7 +383,7 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 28px rgba(255, 107, 44, 0.4);
         }
- 
+
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -403,7 +403,7 @@
             border-color: rgba(255,255,255,0.35);
             background: rgba(255,255,255,0.04);
         }
- 
+
         .hero-guarantee {
             color: var(--text-muted);
             font-size: 0.82rem;
@@ -415,12 +415,12 @@
             color: var(--accent-green);
             flex-shrink: 0;
         }
- 
+
         /* Hero visual / image */
         .hero-visual {
             position: relative;
         }
- 
+
         .hero-visual-img {
             width: 100%;
             border-radius: var(--radius-lg);
@@ -428,7 +428,7 @@
             object-fit: cover;
             border: 1px solid var(--border-subtle);
         }
- 
+
         /* Floating stat cards on hero image */
         .hero-stat {
             position: absolute;
@@ -460,13 +460,13 @@
             left: -8px;
             animation: float 4s ease-in-out infinite 1.5s;
         }
- 
+
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-8px); }
         }
- 
- 
+
+
         /* ================================================================
            TRUST BAR
            ================================================================ */
@@ -478,7 +478,7 @@
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
         }
- 
+
         .trust-items {
             display: flex;
             justify-content: center;
@@ -486,7 +486,7 @@
             min-width: max-content;
             padding: 0 20px;
         }
- 
+
         .trust-item {
             display: flex;
             align-items: center;
@@ -501,8 +501,8 @@
             color: var(--accent-blue);
             flex-shrink: 0;
         }
- 
- 
+
+
         /* ================================================================
            BENEFITS / VORTEILE
            ================================================================ */
@@ -511,7 +511,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
         }
- 
+
         .benefit-card {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
@@ -540,7 +540,7 @@
         .benefit-card:hover::before {
             opacity: 1;
         }
- 
+
         .benefit-icon {
             width: 48px;
             height: 48px;
@@ -554,7 +554,7 @@
         .benefit-icon svg {
             color: var(--accent-blue);
         }
- 
+
         .benefit-card h3 {
             font-family: var(--font-display);
             font-size: 1rem;
@@ -566,21 +566,21 @@
             font-size: 0.88rem;
             line-height: 1.65;
         }
- 
- 
+
+
         /* ================================================================
            PROCESS / ABLAUF
            ================================================================ */
         #ablauf {
             background: var(--bg-surface);
         }
- 
+
         .process-steps {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 14px;
         }
- 
+
         .process-step {
             text-align: center;
             padding: clamp(20px, 2.5vw, 32px) 14px;
@@ -593,7 +593,7 @@
             transform: translateY(-4px);
             border-color: var(--border-glow);
         }
- 
+
         .step-number {
             font-family: var(--font-display);
             font-weight: 800;
@@ -603,7 +603,7 @@
             margin-bottom: 8px;
             line-height: 1;
         }
- 
+
         .step-icon {
             width: 48px;
             height: 48px;
@@ -617,7 +617,7 @@
         .step-icon svg {
             color: var(--accent-blue);
         }
- 
+
         .process-step h3 {
             font-family: var(--font-display);
             font-size: 0.92rem;
@@ -629,8 +629,8 @@
             font-size: 0.82rem;
             line-height: 1.6;
         }
- 
- 
+
+
         /* ================================================================
            COMPARISON SLIDER (Vorher / Nachher)
            ================================================================ */
@@ -638,7 +638,7 @@
             max-width: 800px;
             margin: 0 auto 40px;
         }
- 
+
         .comparison-slider {
             position: relative;
             width: 100%;
@@ -651,7 +651,7 @@
             -webkit-user-select: none;
             touch-action: none;
         }
- 
+
         .comparison-slider img {
             position: absolute;
             top: 0;
@@ -661,11 +661,11 @@
             object-fit: cover;
             pointer-events: none;
         }
- 
+
         .comparison-slider .slider-after {
             clip-path: inset(0 0 0 50%);
         }
- 
+
         .slider-handle {
             position: absolute;
             top: 0;
@@ -702,7 +702,7 @@
             z-index: 11;
             font-family: var(--font-display);
         }
- 
+
         .slider-label {
             position: absolute;
             bottom: 16px;
@@ -726,7 +726,7 @@
             background: rgba(45, 212, 160, 0.85);
             color: #fff;
         }
- 
+
         .slider-hint {
             text-align: center;
             color: var(--text-muted);
@@ -734,7 +734,7 @@
             margin-top: 12px;
             font-family: var(--font-display);
         }
- 
+
         /* Info cards below slider */
         .ba-info-grid {
             display: grid;
@@ -742,14 +742,14 @@
             gap: 16px;
             margin-bottom: 36px;
         }
- 
+
         .ba-info-card {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-md);
             padding: clamp(16px, 2.5vw, 24px);
         }
- 
+
         .ba-tag {
             display: inline-block;
             font-family: var(--font-display);
@@ -769,7 +769,7 @@
             background: rgba(45, 212, 160, 0.12);
             color: var(--accent-green);
         }
- 
+
         .ba-info-card ul {
             list-style: none;
             display: flex;
@@ -788,8 +788,8 @@
             flex-shrink: 0;
             margin-top: 3px;
         }
- 
- 
+
+
         /* Tech table */
         .tech-table-wrap {
             background: var(--bg-card);
@@ -841,21 +841,21 @@
             color: var(--text-primary);
             font-weight: 500;
         }
- 
- 
+
+
         /* ================================================================
            PRICING / PREISE
            ================================================================ */
         #preise {
             background: var(--bg-surface);
         }
- 
+
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
- 
+
         .price-card {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
@@ -870,7 +870,7 @@
             transform: translateY(-4px);
             border-color: var(--border-glow);
         }
- 
+
         .price-card--featured {
             border-color: var(--accent-blue);
             box-shadow: 0 0 60px rgba(0, 168, 255, 0.08);
@@ -890,14 +890,14 @@
             padding: 5px 14px;
             border-radius: 0 0 8px 8px;
         }
- 
+
         .price-card-icon {
             margin-bottom: 16px;
         }
         .price-card-icon svg {
             color: var(--accent-blue);
         }
- 
+
         .price-card h3 {
             font-family: var(--font-display);
             font-weight: 700;
@@ -909,7 +909,7 @@
             font-size: 0.82rem;
             margin-bottom: 16px;
         }
- 
+
         .price-amount {
             font-family: var(--font-display);
             font-weight: 800;
@@ -921,13 +921,13 @@
             font-weight: 400;
             color: var(--text-muted);
         }
- 
+
         .price-note {
             font-size: 0.78rem;
             color: var(--text-muted);
             margin-bottom: 24px;
         }
- 
+
         .price-features {
             list-style: none;
             display: flex;
@@ -948,13 +948,13 @@
             flex-shrink: 0;
             margin-top: 3px;
         }
- 
+
         .price-card .btn-primary {
             width: 100%;
             justify-content: center;
             text-align: center;
         }
- 
+
         .price-card .btn-outline {
             width: 100%;
             display: flex;
@@ -973,8 +973,8 @@
             border-color: var(--accent-blue);
             background: var(--accent-blue-dim);
         }
- 
- 
+
+
         /* ================================================================
            FAQ
            ================================================================ */
@@ -982,11 +982,11 @@
             max-width: 780px;
             margin: 0 auto;
         }
- 
+
         .faq-item {
             border-bottom: 1px solid var(--border-subtle);
         }
- 
+
         .faq-question {
             width: 100%;
             background: none;
@@ -1007,7 +1007,7 @@
         .faq-question:hover {
             color: var(--accent-blue);
         }
- 
+
         .faq-icon {
             width: 28px;
             height: 28px;
@@ -1029,7 +1029,7 @@
         .faq-item.active .faq-icon svg {
             color: #fff;
         }
- 
+
         .faq-answer {
             max-height: 0;
             overflow: hidden;
@@ -1041,22 +1041,22 @@
             font-size: 0.9rem;
             line-height: 1.8;
         }
- 
- 
+
+
         /* ================================================================
            CONTACT / KONTAKT
            ================================================================ */
         #kontakt {
             background: var(--bg-surface);
         }
- 
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: start;
         }
- 
+
         .contact-text h2 {
             font-family: var(--font-display);
             font-size: clamp(1.4rem, 3.5vw, 2.2rem);
@@ -1070,14 +1070,14 @@
             line-height: 1.75;
             font-size: 0.95rem;
         }
- 
+
         .contact-info-item {
             display: flex;
             gap: 12px;
             align-items: start;
             margin-bottom: 18px;
         }
- 
+
         .contact-info-icon {
             width: 40px;
             height: 40px;
@@ -1091,7 +1091,7 @@
         .contact-info-icon svg {
             color: var(--accent-blue);
         }
- 
+
         .contact-info-label {
             font-size: 0.75rem;
             color: var(--text-muted);
@@ -1111,7 +1111,7 @@
         .contact-info-value a:hover {
             color: var(--accent-blue);
         }
- 
+
         /* Contact form */
         .contact-form {
             background: var(--bg-card);
@@ -1119,13 +1119,13 @@
             border-radius: var(--radius-lg);
             padding: clamp(24px, 4vw, 40px);
         }
- 
+
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
         }
- 
+
         .form-group {
             display: flex;
             flex-direction: column;
@@ -1134,14 +1134,14 @@
         .form-group--full {
             grid-column: 1 / -1;
         }
- 
+
         .form-group label {
             font-size: 0.8rem;
             font-weight: 500;
             color: var(--text-secondary);
             font-family: var(--font-display);
         }
- 
+
         .form-group input,
         .form-group textarea,
         .form-group select {
@@ -1173,7 +1173,7 @@
             background-position: right 14px center;
             padding-right: 38px;
         }
- 
+
         .form-submit {
             grid-column: 1 / -1;
             padding-top: 6px;
@@ -1183,8 +1183,8 @@
             justify-content: center;
             font-size: 0.95rem;
         }
- 
- 
+
+
         /* ================================================================
            FOOTER
            ================================================================ */
@@ -1192,7 +1192,7 @@
             border-top: 1px solid var(--border-subtle);
             padding: 28px 0;
         }
- 
+
         .footer-inner {
             display: flex;
             justify-content: space-between;
@@ -1200,12 +1200,12 @@
             flex-wrap: wrap;
             gap: 12px;
         }
- 
+
         .footer-copy {
             font-size: 0.82rem;
             color: var(--text-muted);
         }
- 
+
         .footer-links {
             display: flex;
             gap: 20px;
@@ -1220,8 +1220,8 @@
         .footer-links a:hover {
             color: var(--text-secondary);
         }
- 
- 
+
+
         /* ================================================================
            RESPONSIVE
            ================================================================ */
@@ -1233,12 +1233,12 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
- 
+
         @media (max-width: 768px) {
             html {
                 scroll-padding-top: 64px;
             }
- 
+
             .nav-links,
             .nav-inner > .nav-cta {
                 display: none;
@@ -1246,7 +1246,7 @@
             .hamburger {
                 display: flex;
             }
- 
+
             .hero {
                 min-height: auto;
                 padding: 80px 0 40px;
@@ -1268,7 +1268,7 @@
                 top: -6px;
                 left: 6px;
             }
- 
+
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
@@ -1285,7 +1285,7 @@
                 grid-template-columns: 1fr;
             }
         }
- 
+
         @media (max-width: 480px) {
             .container {
                 padding: 0 16px;
@@ -1311,9 +1311,9 @@
         }
     </style>
 </head>
- 
+
 <body>
- 
+
 <!-- ================================================================
      NAVIGATION
      ================================================================ -->
@@ -1336,7 +1336,7 @@
         </button>
     </div>
 </nav>
- 
+
 <!-- Mobile fullscreen navigation overlay -->
 <div class="mobile-nav" id="mobileNav">
     <a href="#vorteile" onclick="closeMenu()">Vorteile</a>
@@ -1346,8 +1346,8 @@
     <a href="#faq" onclick="closeMenu()">FAQ</a>
     <a href="#kontakt" class="nav-cta" onclick="closeMenu()">Jetzt Angebot anfragen</a>
 </div>
- 
- 
+
+
 <!-- ================================================================
      HERO SECTION
      ================================================================ -->
@@ -1359,13 +1359,13 @@
                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     1 Jahr Garantie auf jede Reinigung
                 </div>
- 
+
                 <h1>DPF Reinigung in <span class="highlight">Dresden</span> – schonend, professionell, messbar</h1>
- 
+
                 <p class="hero-text">
                     Wir reinigen Ihren Dieselpartikelfilter mit einem schonenden, professionellen Verfahren – ganz ohne Ausbrennen. Ruß und Asche werden tief aus dem Filter entfernt, für eine Wiederherstellung so nah wie möglich am Neuzustand. Deutlich günstiger als ein neuer DPF.
                 </p>
- 
+
                 <div class="hero-buttons">
                     <a href="#kontakt" class="btn-primary">
                         Jetzt Angebot anfragen
@@ -1373,13 +1373,13 @@
                     </a>
                     <a href="#ablauf" class="btn-secondary">Ablauf ansehen</a>
                 </div>
- 
+
                 <p class="hero-guarantee">
                     <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                     12 Monate Garantie · PKW ab 349 € inkl. MwSt.
                 </p>
             </div>
- 
+
             <div class="hero-visual reveal">
                 <img class="hero-visual-img"
                      src="main1.webp"
@@ -1397,8 +1397,8 @@
         </div>
     </div>
 </section>
- 
- 
+
+
 <!-- ================================================================
      TRUST BAR
      ================================================================ -->
@@ -1426,8 +1426,8 @@
         </div>
     </div>
 </div>
- 
- 
+
+
 <!-- ================================================================
      VORTEILE / BENEFITS
      ================================================================ -->
@@ -1438,7 +1438,7 @@
             <h2 class="section-title">Warum DPFtop?</h2>
             <p class="section-subtitle">Professionelle Dieselpartikelfilter-Reinigung mit messbaren Ergebnissen – schonend für den Filter, gut für die Umwelt und Ihr Budget.</p>
         </div>
- 
+
         <div class="benefits-grid">
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
@@ -1447,7 +1447,7 @@
                 <h3>Tiefenreinigung statt Schnelllösung</h3>
                 <p>Unser Verfahren entfernt Ruß und Asche tief aus den Kanälen des Filters. Das Ergebnis: bis zu ca.&nbsp;95&nbsp;% des ursprünglichen Durchflusses können wiederhergestellt werden.</p>
             </div>
- 
+
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
@@ -1455,7 +1455,7 @@
                 <h3>Schonendes Verfahren – ohne Ausbrennen</h3>
                 <p>Kein Ausbrennen, keine aggressiven Temperaturen. Unser schonendes und effektives Reinigungsverfahren bewahrt die empfindliche Keramikstruktur – Ihr Filtergehäuse bleibt vollständig unversehrt.</p>
             </div>
- 
+
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
@@ -1463,7 +1463,7 @@
                 <h3>Messbares Ergebnis</h3>
                 <p>Jeder Filter wird vor und nach der Reinigung gemessen – Differenzdruck, Durchfluss und Restbeladung. Sie erhalten ein dokumentiertes Vorher-/Nachher-Protokoll.</p>
             </div>
- 
+
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1471,7 +1471,7 @@
                 <h3>1 Jahr Garantie</h3>
                 <p>Wir geben 12&nbsp;Monate Garantie auf unsere DPF-Reinigung. Das heißt: Sie können sich auf das Ergebnis verlassen.</p>
             </div>
- 
+
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
@@ -1479,7 +1479,7 @@
                 <h3>Deutlich günstiger als ein neuer Filter</h3>
                 <p>Ein neuer DPF kann schnell mehrere tausend Euro kosten. Unsere professionelle Reinigung spart Ihnen einen erheblichen Teil – ohne Kompromisse bei der Qualität.</p>
             </div>
- 
+
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
@@ -1490,8 +1490,8 @@
         </div>
     </div>
 </section>
- 
- 
+
+
 <!-- ================================================================
      ABLAUF / PROCESS
      ================================================================ -->
@@ -1502,7 +1502,7 @@
             <h2 class="section-title">So läuft die DPF Reinigung ab</h2>
             <p class="section-subtitle">Von der Diagnose bis zum Wiedereinbau – transparent, effizient und in 24–48 Stunden nach Eingang erledigt.</p>
         </div>
- 
+
         <div class="process-steps">
             <div class="process-step reveal">
                 <div class="step-number">01</div>
@@ -1510,28 +1510,28 @@
                 <h3>Diagnose</h3>
                 <p>Filterzustand prüfen, Fehlercodes auslesen. Gemeinsam klären, ob eine Reinigung sinnvoll ist.</p>
             </div>
- 
+
             <div class="process-step reveal">
                 <div class="step-number">02</div>
                 <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="6" width="15" height="10" rx="1"/><path d="M16 10h4l3 3v3h-7V10z"/></svg></div>
                 <h3>Ausbau &amp; Versand</h3>
                 <p>Sie oder Ihre Werkstatt bauen den Filter aus und senden ihn an uns – oder bringen ihn direkt in Dresden vorbei.</p>
             </div>
- 
+
             <div class="process-step reveal">
                 <div class="step-number">03</div>
                 <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94"/></svg></div>
                 <h3>Profi-Reinigung</h3>
                 <p>Schonendes und effektives Verfahren ohne Ausbrennen – Ruß und Asche werden tief aus den Kanälen gelöst.</p>
             </div>
- 
+
             <div class="process-step reveal">
                 <div class="step-number">04</div>
                 <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
                 <h3>Vorher-/Nachher-Protokoll</h3>
                 <p>Messung vor und nach der Reinigung. Sie erhalten einen dokumentierten Bericht mit allen Werten.</p>
             </div>
- 
+
             <div class="process-step reveal">
                 <div class="step-number">05</div>
                 <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -1541,8 +1541,8 @@
         </div>
     </div>
 </section>
- 
- 
+
+
 <!-- ================================================================
      VORHER / NACHHER – COMPARISON SLIDER
      ================================================================ -->
@@ -1553,7 +1553,7 @@
             <h2 class="section-title">Vorher / Nachher</h2>
             <p class="section-subtitle">Sehen Sie den Unterschied: messbar bessere Werte nach der professionellen DPF-Reinigung.</p>
         </div>
- 
+
         <div class="slider-wrap reveal">
             <div class="comparison-slider" id="compSlider">
                 <img src="vorher%20dpf.webp" alt="DPF vor der Reinigung – verstopft" class="slider-before">
@@ -1564,7 +1564,7 @@
             </div>
             <p class="slider-hint">← Schieben Sie den Regler, um den Unterschied zu sehen →</p>
         </div>
- 
+
         <div class="ba-info-grid reveal">
             <div class="ba-info-card">
                 <span class="ba-tag ba-tag--bad">Vorher</span>
@@ -1583,7 +1583,7 @@
                 </ul>
             </div>
         </div>
- 
+
         <div class="tech-table-wrap reveal">
             <p class="tech-table-label">Typische Messwerte (illustratives Beispiel)</p>
             <p class="tech-table-note">* Die tatsächlichen Ergebnisse hängen vom Filterzustand und Fahrzeug ab. Angaben ohne Gewähr.</p>
@@ -1603,8 +1603,8 @@
         <p style="color: var(--text-muted); font-size: 0.74rem; margin-top: 8px; text-align: center;">* Sofern keine weiteren Defekte am Fahrzeug vorliegen.</p>
     </div>
 </section>
- 
- 
+
+
 <!-- ================================================================
      PREISE / PRICING
      ================================================================ -->
@@ -1615,7 +1615,7 @@
             <h2 class="section-title">Unsere Reinigungspakete</h2>
             <p class="section-subtitle">Faire Festpreise, keine versteckten Kosten. Alle Preise inkl. MwSt., Vorher-/Nachher-Protokoll und 12 Monate Garantie.</p>
         </div>
- 
+
         <div class="pricing-grid">
             <div class="price-card reveal">
                 <div class="price-card-icon"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 17h14"/><path d="M3 17a1 1 0 011-1h.09l1.35-4.72A3 3 0 018.38 9h7.24a3 3 0 012.94 2.28L19.91 16H20a1 1 0 011 1v1a1 1 0 01-1 1H4a1 1 0 01-1-1v-1z"/><circle cx="7.5" cy="17" r="1" fill="currentColor"/><circle cx="16.5" cy="17" r="1" fill="currentColor"/></svg></div>
@@ -1631,7 +1631,7 @@
                 </ul>
                 <a href="#kontakt" class="btn-outline">Angebot anfragen</a>
             </div>
- 
+
             <div class="price-card price-card--featured reveal">
                 <div class="price-card-icon"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
                 <h3>Transporter / SUV</h3>
@@ -1647,7 +1647,7 @@
                 </ul>
                 <a href="#kontakt" class="btn-primary">Angebot anfragen</a>
             </div>
- 
+
             <div class="price-card reveal">
                 <div class="price-card-icon"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 17h20M4 17V7a2 2 0 012-2h8v12"/><path d="M14 5h3l4 5v7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div>
                 <h3>LKW / Baumaschine</h3>
@@ -1666,8 +1666,8 @@
         </div>
     </div>
 </section>
- 
- 
+
+
 <!-- ================================================================
      FAQ
      ================================================================ -->
@@ -1678,7 +1678,7 @@
             <h2 class="section-title">Häufige Fragen</h2>
             <p class="section-subtitle">Alles, was Sie über die professionelle DPF-Reinigung wissen müssen.</p>
         </div>
- 
+
         <div class="faq-list reveal">
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
@@ -1687,7 +1687,7 @@
                 </button>
                 <div class="faq-answer"><div class="faq-answer-inner">In der Regel ist Ihr Filter innerhalb von 24–48 Stunden nach Eingang bei uns gereinigt und versandfertig. Bei hohem Auftragsvolumen oder besonders aufwändigen Fällen informieren wir Sie vorab über die voraussichtliche Dauer.</div></div>
             </div>
- 
+
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Verliere ich durch die Reinigung meine Herstellergarantie?</span>
@@ -1695,7 +1695,7 @@
                 </button>
                 <div class="faq-answer"><div class="faq-answer-inner">Viele Fahrzeughersteller akzeptieren eine professionelle Reinigung des Dieselpartikelfilters. Wir empfehlen Ihnen jedoch, Ihre individuellen Garantiebedingungen vorab zu prüfen oder sich bei Ihrem Händler zu erkundigen. Wir bieten keine Rechtsberatung an, stehen Ihnen aber gerne mit Informationen zur Seite.</div></div>
             </div>
- 
+
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Was passiert, wenn der Filter beschädigt ist?</span>
@@ -1703,7 +1703,7 @@
                 </button>
                 <div class="faq-answer"><div class="faq-answer-inner">Vor jeder Reinigung prüfen wir den Zustand des Filters gründlich. Sollte der Filter beschädigt sein (z.&thinsp;B. Risse oder geschmolzenes Substrat), informieren wir Sie umgehend. In diesem Fall kann eine Reinigung unter Umständen nicht mehr sinnvoll sein – Sie zahlen dann selbstverständlich keine Reinigungsgebühr.</div></div>
             </div>
- 
+
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Kann ich den Filter auch selbst ein- und ausbauen?</span>
@@ -1711,7 +1711,7 @@
                 </button>
                 <div class="faq-answer"><div class="faq-answer-inner">Grundsätzlich ja – wenn Sie über die nötige Erfahrung und das passende Werkzeug verfügen. Bitte beachten Sie, dass ein unsachgemäßer Aus- oder Einbau zu Schäden am Filter oder Fahrzeug führen kann. Im Zweifelsfall empfehlen wir, den Aus- und Einbau von einer Fachwerkstatt durchführen zu lassen.</div></div>
             </div>
- 
+
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Gibt es eine Garantie auf die Reinigung?</span>
@@ -1719,7 +1719,7 @@
                 </button>
                 <div class="faq-answer"><div class="faq-answer-inner">Ja – wir geben 12 Monate Garantie auf die ausgeführte Reinigungsleistung. Das bedeutet: Sollte der Filter innerhalb dieses Zeitraums aufgrund unserer Reinigung nicht mehr die dokumentierten Werte erreichen, kümmern wir uns darum. Die Garantie bezieht sich auf die Reinigungsleistung, nicht auf das gesamte Fahrzeug oder weitere Verschleißteile.</div></div>
             </div>
- 
+
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Wie umweltfreundlich ist die DPF-Reinigung?</span>
@@ -1727,7 +1727,7 @@
                 </button>
                 <div class="faq-answer"><div class="faq-answer-inner">Sehr umweltfreundlich: Durch die Reinigung wird der vorhandene Filter wiederverwendet, anstatt entsorgt und durch einen neuen ersetzt zu werden. Das spart Ressourcen und reduziert Abfall. Die bei der Reinigung anfallenden Rückstände werden von uns fachgerecht und umweltkonform entsorgt.</div></div>
             </div>
- 
+
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Reinigt ihr auch Katalysatoren oder SCR-Systeme?</span>
@@ -1738,8 +1738,8 @@
         </div>
     </div>
 </section>
- 
- 
+
+
 <!-- ================================================================
      KONTAKT / CONTACT – FORMSPREE
      ================================================================ -->
@@ -1751,7 +1751,7 @@
                 <p class="section-label">Kontakt</p>
                 <h2>Jetzt DPF-Reinigung anfragen</h2>
                 <p>Füllen Sie das Formular aus, und wir melden uns innerhalb kürzester Zeit mit einem unverbindlichen Angebot. Ob Werkstatt, Flottenbetreiber oder Privatperson – wir beraten Sie gerne persönlich.</p>
- 
+
                 <div class="contact-info-item">
                     <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
                     <div>
@@ -1759,7 +1759,7 @@
                         <div class="contact-info-value">Dresden</div>
                     </div>
                 </div>
- 
+
                 <div class="contact-info-item">
                     <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
                     <div>
@@ -1767,7 +1767,7 @@
                         <div class="contact-info-value"><a href="tel:+4917641350025">+49 176 41350025</a></div>
                     </div>
                 </div>
- 
+
                 <div class="contact-info-item">
                     <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
                     <div>
@@ -1775,7 +1775,7 @@
                         <div class="contact-info-value"><a href="mailto:info@dpftop.de">info@dpftop.de</a></div>
                     </div>
                 </div>
- 
+
                 <div class="contact-info-item">
                     <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
                     <div>
@@ -1784,7 +1784,7 @@
                     </div>
                 </div>
             </div>
- 
+
             <!-- Right column: Formspree form -->
             <form action="https://formspree.io/f/mnjgkdap" method="POST" class="contact-form reveal">
                 <div class="form-grid">
@@ -1836,8 +1836,8 @@
         </div>
     </div>
 </section>
- 
- 
+
+
 <!-- ================================================================
      FOOTER
      ================================================================ -->
@@ -1853,8 +1853,8 @@
         </div>
     </div>
 </footer>
- 
- 
+
+
 <!-- ================================================================
      JAVASCRIPT
      ================================================================ -->
@@ -1862,32 +1862,32 @@
     // ===== MOBILE MENU =====
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
- 
+
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         mobileNav.classList.toggle('open');
         document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
     });
- 
+
     function closeMenu() {
         hamburger.classList.remove('active');
         mobileNav.classList.remove('open');
         document.body.style.overflow = '';
     }
- 
+
     // ===== FAQ ACCORDION =====
     document.querySelectorAll('.faq-question').forEach(btn => {
         btn.addEventListener('click', () => {
             const item = btn.parentElement;
             const answer = item.querySelector('.faq-answer');
             const isActive = item.classList.contains('active');
- 
+
             document.querySelectorAll('.faq-item').forEach(i => {
                 i.classList.remove('active');
                 i.querySelector('.faq-answer').style.maxHeight = null;
                 i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
             });
- 
+
             if (!isActive) {
                 item.classList.add('active');
                 answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -1895,7 +1895,7 @@
             }
         });
     });
- 
+
     // ===== SCROLL REVEAL =====
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -1904,9 +1904,9 @@
             }
         });
     }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
- 
+
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
- 
+
     // ===== NAV SCROLL EFFECT =====
     window.addEventListener('scroll', () => {
         const nav = document.getElementById('nav');
@@ -1914,16 +1914,16 @@
             ? 'rgba(13, 15, 19, 0.95)'
             : 'rgba(13, 15, 19, 0.82)';
     }, { passive: true });
- 
+
     // ===== COMPARISON SLIDER (Vorher / Nachher) =====
     (function() {
         const slider = document.getElementById('compSlider');
         if (!slider) return;
- 
+
         const afterImg = slider.querySelector('.slider-after');
         const handle = document.getElementById('sliderHandle');
         let isDragging = false;
- 
+
         function setPosition(clientX) {
             const rect = slider.getBoundingClientRect();
             let pct = ((clientX - rect.left) / rect.width) * 100;
@@ -1931,28 +1931,29 @@
             afterImg.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
             handle.style.left = pct + '%';
         }
- 
+
         slider.addEventListener('pointerdown', (e) => {
             isDragging = true;
             slider.setPointerCapture(e.pointerId);
             setPosition(e.clientX);
         });
- 
+
         slider.addEventListener('pointermove', (e) => {
             if (!isDragging) return;
             setPosition(e.clientX);
         });
- 
+
         slider.addEventListener('pointerup', () => {
             isDragging = false;
         });
- 
+
         slider.addEventListener('pointercancel', () => {
             isDragging = false;
         });
     })();
 </script>
- 
+
 </body>
 </html>
+
  
