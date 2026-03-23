@@ -690,7 +690,7 @@
             box-shadow: 0 2px 12px rgba(0,0,0,0.4);
         }
         .slider-handle::after {
-            content: '\27E8  \27E9';
+            content: '⟨  ⟩';
             position: absolute;
             top: 50%;
             left: 50%;
@@ -874,6 +874,21 @@
         .price-card--featured {
             border-color: var(--accent-blue);
             box-shadow: 0 0 60px rgba(0, 168, 255, 0.08);
+        }
+        .price-card--featured::before {
+            content: 'Beliebt';
+            position: absolute;
+            top: -1px;
+            right: 24px;
+            background: var(--accent-blue);
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 0 0 8px 8px;
         }
 
         .price-card-icon {
@@ -1425,7 +1440,6 @@
         </div>
 
         <div class="benefits-grid">
-            <!-- Benefit 1 -->
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9"/><path d="M12 7v5l3 3"/></svg>
@@ -1434,7 +1448,6 @@
                 <p>Unser Verfahren entfernt Ruß und Asche tief aus den Kanälen des Filters. Das Ergebnis: bis zu ca.&nbsp;95&nbsp;% des ursprünglichen Durchflusses können wiederhergestellt werden.</p>
             </div>
 
-            <!-- Benefit 2 -->
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
@@ -1443,7 +1456,6 @@
                 <p>Kein Ausbrennen, keine aggressiven Temperaturen. Unser schonendes und effektives Reinigungsverfahren bewahrt die empfindliche Keramikstruktur – Ihr Filtergehäuse bleibt vollständig unversehrt.</p>
             </div>
 
-            <!-- Benefit 3 -->
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
@@ -1452,7 +1464,6 @@
                 <p>Jeder Filter wird vor und nach der Reinigung gemessen – Differenzdruck, Durchfluss und Restbeladung. Sie erhalten ein dokumentiertes Vorher-/Nachher-Protokoll.</p>
             </div>
 
-            <!-- Benefit 4 -->
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1461,7 +1472,6 @@
                 <p>Wir geben 12&nbsp;Monate Garantie auf unsere DPF-Reinigung. Das heißt: Sie können sich auf das Ergebnis verlassen.</p>
             </div>
 
-            <!-- Benefit 5 -->
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
@@ -1470,7 +1480,6 @@
                 <p>Ein neuer DPF kann schnell mehrere tausend Euro kosten. Unsere professionelle Reinigung spart Ihnen einen erheblichen Teil – ohne Kompromisse bei der Qualität.</p>
             </div>
 
-            <!-- Benefit 6 -->
             <div class="benefit-card reveal">
                 <div class="benefit-icon">
                     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
@@ -1497,45 +1506,35 @@
         <div class="process-steps">
             <div class="process-step reveal">
                 <div class="step-number">01</div>
-                <div class="step-icon">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-                </div>
+                <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
                 <h3>Diagnose</h3>
                 <p>Filterzustand prüfen, Fehlercodes auslesen. Gemeinsam klären, ob eine Reinigung sinnvoll ist.</p>
             </div>
 
             <div class="process-step reveal">
                 <div class="step-number">02</div>
-                <div class="step-icon">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="6" width="15" height="10" rx="1"/><path d="M16 10h4l3 3v3h-7V10z"/></svg>
-                </div>
+                <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="6" width="15" height="10" rx="1"/><path d="M16 10h4l3 3v3h-7V10z"/></svg></div>
                 <h3>Ausbau &amp; Versand</h3>
                 <p>Sie oder Ihre Werkstatt bauen den Filter aus und senden ihn an uns – oder bringen ihn direkt in Dresden vorbei.</p>
             </div>
 
             <div class="process-step reveal">
                 <div class="step-number">03</div>
-                <div class="step-icon">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94"/></svg>
-                </div>
+                <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94"/></svg></div>
                 <h3>Profi-Reinigung</h3>
                 <p>Schonendes und effektives Verfahren ohne Ausbrennen – Ruß und Asche werden tief aus den Kanälen gelöst.</p>
             </div>
 
             <div class="process-step reveal">
                 <div class="step-number">04</div>
-                <div class="step-icon">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
-                </div>
+                <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
                 <h3>Vorher-/Nachher-Protokoll</h3>
                 <p>Messung vor und nach der Reinigung. Sie erhalten einen dokumentierten Bericht mit allen Werten.</p>
             </div>
 
             <div class="process-step reveal">
                 <div class="step-number">05</div>
-                <div class="step-icon">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
+                <div class="step-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
                 <h3>Rückversand &amp; Einbau</h3>
                 <p>Gereinigter Filter zurück zu Ihnen. Wieder einbauen, Fehler zurücksetzen – und losfahren.</p>
             </div>
@@ -1555,7 +1554,6 @@
             <p class="section-subtitle">Sehen Sie den Unterschied: messbar bessere Werte nach der professionellen DPF-Reinigung.</p>
         </div>
 
-        <!-- Interactive comparison slider -->
         <div class="slider-wrap reveal">
             <div class="comparison-slider" id="compSlider">
                 <img src="vorher%20dpf.webp" alt="DPF vor der Reinigung – verstopft" class="slider-before">
@@ -1567,81 +1565,42 @@
             <p class="slider-hint">← Schieben Sie den Regler, um den Unterschied zu sehen →</p>
         </div>
 
-        <!-- Info cards below slider -->
         <div class="ba-info-grid reveal">
             <div class="ba-info-card">
                 <span class="ba-tag ba-tag--bad">Vorher</span>
                 <ul>
-                    <li>
-                        <svg width="14" height="14" fill="none" stroke="#ff6b6b" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                        Hoher Differenzdruck – eingeschränkte Leistung
-                    </li>
-                    <li>
-                        <svg width="14" height="14" fill="none" stroke="#ff6b6b" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                        DPF-Fehlermeldung im Fahrzeug aktiv
-                    </li>
-                    <li>
-                        <svg width="14" height="14" fill="none" stroke="#ff6b6b" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                        Regeneration nicht mehr möglich
-                    </li>
+                    <li><svg width="14" height="14" fill="none" stroke="#ff6b6b" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Hoher Differenzdruck – eingeschränkte Leistung</li>
+                    <li><svg width="14" height="14" fill="none" stroke="#ff6b6b" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> DPF-Fehlermeldung im Fahrzeug aktiv</li>
+                    <li><svg width="14" height="14" fill="none" stroke="#ff6b6b" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Regeneration nicht mehr möglich</li>
                 </ul>
             </div>
             <div class="ba-info-card">
                 <span class="ba-tag ba-tag--good">Nachher</span>
                 <ul>
-                    <li>
-                        <svg width="14" height="14" fill="none" stroke="var(--accent-green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                        Deutlich reduzierter Differenzdruck
-                    </li>
-                    <li>
-                        <svg width="14" height="14" fill="none" stroke="var(--accent-green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                        Bessere Regeneration &amp; Motorleistung
-                    </li>
-                    <li>
-                        <svg width="14" height="14" fill="none" stroke="var(--accent-green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                        DPF-Fehlermeldungen i.&thinsp;d.&thinsp;R. behoben*
-                    </li>
+                    <li><svg width="14" height="14" fill="none" stroke="var(--accent-green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Deutlich reduzierter Differenzdruck</li>
+                    <li><svg width="14" height="14" fill="none" stroke="var(--accent-green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Bessere Regeneration &amp; Motorleistung</li>
+                    <li><svg width="14" height="14" fill="none" stroke="var(--accent-green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> DPF-Fehlermeldungen i.&thinsp;d.&thinsp;R. behoben*</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Technical data table -->
         <div class="tech-table-wrap reveal">
             <p class="tech-table-label">Typische Messwerte (illustratives Beispiel)</p>
             <p class="tech-table-note">* Die tatsächlichen Ergebnisse hängen vom Filterzustand und Fahrzeug ab. Angaben ohne Gewähr.</p>
             <div class="table-scroll">
                 <table>
                     <thead>
-                        <tr>
-                            <th>Messwert</th>
-                            <th>Vor der Reinigung</th>
-                            <th>Nach der Reinigung (typisch)</th>
-                        </tr>
+                        <tr><th>Messwert</th><th>Vor der Reinigung</th><th>Nach der Reinigung (typisch)</th></tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Differenzdruck</td>
-                            <td>~ 180–250 mbar</td>
-                            <td>~ 20–50 mbar</td>
-                        </tr>
-                        <tr>
-                            <td>Restbeladung (Asche)</td>
-                            <td>hoch</td>
-                            <td>minimal</td>
-                        </tr>
-                        <tr>
-                            <td>Durchflussrate</td>
-                            <td>~ 30–40 %</td>
-                            <td>~ 90–95 %</td>
-                        </tr>
+                        <tr><td>Differenzdruck</td><td>~ 180–250 mbar</td><td>~ 20–50 mbar</td></tr>
+                        <tr><td>Restbeladung (Asche)</td><td>hoch</td><td>minimal</td></tr>
+                        <tr><td>Durchflussrate</td><td>~ 30–40 %</td><td>~ 90–95 %</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <p style="color: var(--text-muted); font-size: 0.74rem; margin-top: 8px; text-align: center;">
-            * Sofern keine weiteren Defekte am Fahrzeug vorliegen.
-        </p>
-
+        <p style="color: var(--text-muted); font-size: 0.74rem; margin-top: 8px; text-align: center;">* Sofern keine weiteren Defekte am Fahrzeug vorliegen.</p>
     </div>
 </section>
 
@@ -1658,11 +1617,8 @@
         </div>
 
         <div class="pricing-grid">
-            <!-- PKW -->
             <div class="price-card reveal">
-                <div class="price-card-icon">
-                    <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 17h14"/><path d="M3 17a1 1 0 011-1h.09l1.35-4.72A3 3 0 018.38 9h7.24a3 3 0 012.94 2.28L19.91 16H20a1 1 0 011 1v1a1 1 0 01-1 1H4a1 1 0 01-1-1v-1z"/><circle cx="7.5" cy="17" r="1" fill="currentColor"/><circle cx="16.5" cy="17" r="1" fill="currentColor"/></svg>
-                </div>
+                <div class="price-card-icon"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 17h14"/><path d="M3 17a1 1 0 011-1h.09l1.35-4.72A3 3 0 018.38 9h7.24a3 3 0 012.94 2.28L19.91 16H20a1 1 0 011 1v1a1 1 0 01-1 1H4a1 1 0 01-1-1v-1z"/><circle cx="7.5" cy="17" r="1" fill="currentColor"/><circle cx="16.5" cy="17" r="1" fill="currentColor"/></svg></div>
                 <h3>PKW</h3>
                 <p class="price-desc">Für PKW-Dieselpartikelfilter aller gängigen Marken</p>
                 <div class="price-amount">349 € <span>inkl. MwSt.</span></div>
@@ -1676,11 +1632,8 @@
                 <a href="#kontakt" class="btn-outline">Angebot anfragen</a>
             </div>
 
-            <!-- Transporter / SUV (featured) -->
             <div class="price-card price-card--featured reveal">
-                <div class="price-card-icon">
-                    <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                </div>
+                <div class="price-card-icon"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
                 <h3>Transporter / SUV</h3>
                 <p class="price-desc">Für größere Filter aus Transportern, Vans und SUVs</p>
                 <div class="price-amount">499 € <span>inkl. MwSt.</span></div>
@@ -1695,11 +1648,8 @@
                 <a href="#kontakt" class="btn-primary">Angebot anfragen</a>
             </div>
 
-            <!-- LKW / Baumaschine -->
             <div class="price-card reveal">
-                <div class="price-card-icon">
-                    <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 17h20M4 17V7a2 2 0 012-2h8v12"/><path d="M14 5h3l4 5v7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
-                </div>
+                <div class="price-card-icon"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 17h20M4 17V7a2 2 0 012-2h8v12"/><path d="M14 5h3l4 5v7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div>
                 <h3>LKW / Baumaschine</h3>
                 <p class="price-desc">Für große DPF-Systeme aus LKW, Bussen und Baumaschinen</p>
                 <div class="price-amount">599 € <span>inkl. MwSt.</span></div>
@@ -1730,81 +1680,60 @@
         </div>
 
         <div class="faq-list reveal">
-            <!-- FAQ 1 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Wie lange dauert die DPF-Reinigung?</span>
                     <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">In der Regel ist Ihr Filter innerhalb von 24–48 Stunden nach Eingang bei uns gereinigt und versandfertig. Bei hohem Auftragsvolumen oder besonders aufwändigen Fällen informieren wir Sie vorab über die voraussichtliche Dauer.</div>
-                </div>
+                <div class="faq-answer"><div class="faq-answer-inner">In der Regel ist Ihr Filter innerhalb von 24–48 Stunden nach Eingang bei uns gereinigt und versandfertig. Bei hohem Auftragsvolumen oder besonders aufwändigen Fällen informieren wir Sie vorab über die voraussichtliche Dauer.</div></div>
             </div>
 
-            <!-- FAQ 2 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Verliere ich durch die Reinigung meine Herstellergarantie?</span>
                     <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">Viele Fahrzeughersteller akzeptieren eine professionelle Reinigung des Dieselpartikelfilters. Wir empfehlen Ihnen jedoch, Ihre individuellen Garantiebedingungen vorab zu prüfen oder sich bei Ihrem Händler zu erkundigen. Wir bieten keine Rechtsberatung an, stehen Ihnen aber gerne mit Informationen zur Seite.</div>
-                </div>
+                <div class="faq-answer"><div class="faq-answer-inner">Viele Fahrzeughersteller akzeptieren eine professionelle Reinigung des Dieselpartikelfilters. Wir empfehlen Ihnen jedoch, Ihre individuellen Garantiebedingungen vorab zu prüfen oder sich bei Ihrem Händler zu erkundigen. Wir bieten keine Rechtsberatung an, stehen Ihnen aber gerne mit Informationen zur Seite.</div></div>
             </div>
 
-            <!-- FAQ 3 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Was passiert, wenn der Filter beschädigt ist?</span>
                     <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">Vor jeder Reinigung prüfen wir den Zustand des Filters gründlich. Sollte der Filter beschädigt sein (z.B. Risse oder geschmolzenes Substrat), informieren wir Sie umgehend. In diesem Fall kann eine Reinigung unter Umständen nicht mehr sinnvoll sein – Sie zahlen dann selbstverständlich keine Reinigungsgebühr.</div>
-                </div>
+                <div class="faq-answer"><div class="faq-answer-inner">Vor jeder Reinigung prüfen wir den Zustand des Filters gründlich. Sollte der Filter beschädigt sein (z.&thinsp;B. Risse oder geschmolzenes Substrat), informieren wir Sie umgehend. In diesem Fall kann eine Reinigung unter Umständen nicht mehr sinnvoll sein – Sie zahlen dann selbstverständlich keine Reinigungsgebühr.</div></div>
             </div>
 
-            <!-- FAQ 4 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Kann ich den Filter auch selbst ein- und ausbauen?</span>
                     <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">Grundsätzlich ja – wenn Sie über die nötige Erfahrung und das passende Werkzeug verfügen. Bitte beachten Sie, dass ein unsachgemäßer Aus- oder Einbau zu Schäden am Filter oder Fahrzeug führen kann. Im Zweifelsfall empfehlen wir, den Aus- und Einbau von einer Fachwerkstatt durchführen zu lassen.</div>
-                </div>
+                <div class="faq-answer"><div class="faq-answer-inner">Grundsätzlich ja – wenn Sie über die nötige Erfahrung und das passende Werkzeug verfügen. Bitte beachten Sie, dass ein unsachgemäßer Aus- oder Einbau zu Schäden am Filter oder Fahrzeug führen kann. Im Zweifelsfall empfehlen wir, den Aus- und Einbau von einer Fachwerkstatt durchführen zu lassen.</div></div>
             </div>
 
-            <!-- FAQ 5 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Gibt es eine Garantie auf die Reinigung?</span>
                     <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">Ja – wir geben 12 Monate Garantie auf die ausgeführte Reinigungsleistung. Das bedeutet: Sollte der Filter innerhalb dieses Zeitraums aufgrund unserer Reinigung nicht mehr die dokumentierten Werte erreichen, kümmern wir uns darum. Die Garantie bezieht sich auf die Reinigungsleistung, nicht auf das gesamte Fahrzeug oder weitere Verschleißteile.</div>
-                </div>
+                <div class="faq-answer"><div class="faq-answer-inner">Ja – wir geben 12 Monate Garantie auf die ausgeführte Reinigungsleistung. Das bedeutet: Sollte der Filter innerhalb dieses Zeitraums aufgrund unserer Reinigung nicht mehr die dokumentierten Werte erreichen, kümmern wir uns darum. Die Garantie bezieht sich auf die Reinigungsleistung, nicht auf das gesamte Fahrzeug oder weitere Verschleißteile.</div></div>
             </div>
 
-            <!-- FAQ 6 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Wie umweltfreundlich ist die DPF-Reinigung?</span>
                     <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">Sehr umweltfreundlich: Durch die Reinigung wird der vorhandene Filter wiederverwendet, anstatt entsorgt und durch einen neuen ersetzt zu werden. Das spart Ressourcen und reduziert Abfall. Die bei der Reinigung anfallenden Rückstände werden von uns fachgerecht und umweltkonform entsorgt.</div>
-                </div>
+                <div class="faq-answer"><div class="faq-answer-inner">Sehr umweltfreundlich: Durch die Reinigung wird der vorhandene Filter wiederverwendet, anstatt entsorgt und durch einen neuen ersetzt zu werden. Das spart Ressourcen und reduziert Abfall. Die bei der Reinigung anfallenden Rückstände werden von uns fachgerecht und umweltkonform entsorgt.</div></div>
             </div>
 
-            <!-- FAQ 7 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>Reinigt ihr auch Katalysatoren oder SCR-Systeme?</span>
                     <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                 </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">Ja, auf Anfrage reinigen wir auch Katalysatoren und SCR-Systeme. Kontaktieren Sie uns einfach mit den Details zu Ihrem Fahrzeug, und wir prüfen, ob eine Reinigung in Ihrem Fall möglich und sinnvoll ist.</div>
-                </div>
+                <div class="faq-answer"><div class="faq-answer-inner">Ja, auf Anfrage reinigen wir auch Katalysatoren und SCR-Systeme. Kontaktieren Sie uns einfach mit den Details zu Ihrem Fahrzeug, und wir prüfen, ob eine Reinigung in Ihrem Fall möglich und sinnvoll ist.</div></div>
             </div>
         </div>
     </div>
@@ -1824,9 +1753,7 @@
                 <p>Füllen Sie das Formular aus, und wir melden uns innerhalb kürzester Zeit mit einem unverbindlichen Angebot. Ob Werkstatt, Flottenbetreiber oder Privatperson – wir beraten Sie gerne persönlich.</p>
 
                 <div class="contact-info-item">
-                    <div class="contact-info-icon">
-                        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
+                    <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
                     <div>
                         <div class="contact-info-label">Adresse</div>
                         <div class="contact-info-value">Dresden</div>
@@ -1834,9 +1761,7 @@
                 </div>
 
                 <div class="contact-info-item">
-                    <div class="contact-info-icon">
-                        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                    </div>
+                    <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
                     <div>
                         <div class="contact-info-label">Telefon</div>
                         <div class="contact-info-value"><a href="tel:+4917641350025">+49 176 41350025</a></div>
@@ -1844,9 +1769,7 @@
                 </div>
 
                 <div class="contact-info-item">
-                    <div class="contact-info-icon">
-                        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
+                    <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
                     <div>
                         <div class="contact-info-label">E-Mail</div>
                         <div class="contact-info-value"><a href="mailto:info@dpftop.de">info@dpftop.de</a></div>
@@ -1854,9 +1777,7 @@
                 </div>
 
                 <div class="contact-info-item">
-                    <div class="contact-info-icon">
-                        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    </div>
+                    <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
                     <div>
                         <div class="contact-info-label">Öffnungszeiten</div>
                         <div class="contact-info-value">Mo–Fr: 08:00–17:00 Uhr</div>
@@ -1868,28 +1789,28 @@
             <form action="https://formspree.io/f/mnjgkdap" method="POST" class="contact-form reveal">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="f_name">Name *</label>
-                        <input type="text" id="f_name" name="name" placeholder="Ihr Name" required>
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Ihr Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="f_email">E-Mail *</label>
-                        <input type="email" id="f_email" name="email" placeholder="ihre@email.de" required>
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
                     </div>
                     <div class="form-group">
-                        <label for="f_phone">Telefon *</label>
-                        <input type="tel" id="f_phone" name="phone" placeholder="+49 ..." required>
+                        <label for="phone">Telefon *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+49 ..." required>
                     </div>
                     <div class="form-group">
-                        <label for="f_vehicle">Fahrzeug (Marke / Modell) *</label>
-                        <input type="text" id="f_vehicle" name="vehicle" placeholder="z. B. VW T6 2.0 TDI" required>
+                        <label for="vehicle">Fahrzeug (Marke / Modell) *</label>
+                        <input type="text" id="vehicle" name="vehicle" placeholder="z. B. VW T6 2.0 TDI" required>
                     </div>
                     <div class="form-group">
-                        <label for="f_mileage">Kilometerstand *</label>
-                        <input type="number" id="f_mileage" name="mileage" placeholder="z. B. 185000" required>
+                        <label for="mileage">Kilometerstand *</label>
+                        <input type="number" id="mileage" name="mileage" placeholder="z. B. 185000" required>
                     </div>
                     <div class="form-group">
-                        <label for="f_type">Kundentyp *</label>
-                        <select id="f_type" name="customer_type" required>
+                        <label for="customer_type">Kundentyp *</label>
+                        <select id="customer_type" name="customer_type" required>
                             <option value="" disabled selected>Bitte wählen …</option>
                             <option value="Privatkunde">Privatkunde</option>
                             <option value="Werkstatt">Werkstatt</option>
@@ -1897,12 +1818,12 @@
                         </select>
                     </div>
                     <div class="form-group form-group--full">
-                        <label for="f_error">Fehlermeldung *</label>
-                        <textarea id="f_error" name="error" placeholder="z. B. P2463, DPF-Leuchte an, Notlauf …" required></textarea>
+                        <label for="error">Fehlermeldung *</label>
+                        <textarea id="error" name="error" placeholder="z. B. P2463, DPF-Leuchte an, Notlauf …" required></textarea>
                     </div>
                     <div class="form-group form-group--full">
-                        <label for="f_message">Nachricht</label>
-                        <textarea id="f_message" name="message" placeholder="Weitere Informationen oder Fragen …"></textarea>
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="message" placeholder="Weitere Informationen oder Fragen …"></textarea>
                     </div>
                     <div class="form-submit">
                         <button type="submit" class="btn-primary">
@@ -1939,10 +1860,10 @@
      ================================================================ -->
 <script>
     // ===== MOBILE MENU =====
-    var hamburger = document.getElementById('hamburger');
-    var mobileNav = document.getElementById('mobileNav');
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
 
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         mobileNav.classList.toggle('open');
         document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
@@ -1955,88 +1876,78 @@
     }
 
     // ===== FAQ ACCORDION =====
-    var faqButtons = document.querySelectorAll('.faq-question');
-    for (var i = 0; i < faqButtons.length; i++) {
-        faqButtons[i].addEventListener('click', function() {
-            var item = this.parentElement;
-            var answer = item.querySelector('.faq-answer');
-            var isActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const isActive = item.classList.contains('active');
 
-            // Close all
-            var allItems = document.querySelectorAll('.faq-item');
-            for (var j = 0; j < allItems.length; j++) {
-                allItems[j].classList.remove('active');
-                allItems[j].querySelector('.faq-answer').style.maxHeight = null;
-                allItems[j].querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-            }
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.faq-answer').style.maxHeight = null;
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
 
-            // Open clicked (if it was closed)
             if (!isActive) {
                 item.classList.add('active');
                 answer.style.maxHeight = answer.scrollHeight + 'px';
-                this.setAttribute('aria-expanded', 'true');
+                btn.setAttribute('aria-expanded', 'true');
             }
         });
-    }
+    });
 
     // ===== SCROLL REVEAL =====
-    var revealElements = document.querySelectorAll('.reveal');
-    var revealObserver = new IntersectionObserver(function(entries) {
-        for (var i = 0; i < entries.length; i++) {
-            if (entries[i].isIntersecting) {
-                entries[i].target.classList.add('visible');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
-        }
+        });
     }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-    for (var i = 0; i < revealElements.length; i++) {
-        revealObserver.observe(revealElements[i]);
-    }
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     // ===== NAV SCROLL EFFECT =====
-    window.addEventListener('scroll', function() {
-        var nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('nav');
         nav.style.background = window.scrollY > 50
             ? 'rgba(13, 15, 19, 0.95)'
             : 'rgba(13, 15, 19, 0.82)';
     }, { passive: true });
-</script>
 
-<!-- Comparison slider script -->
-<script>
+    // ===== COMPARISON SLIDER (Vorher / Nachher) =====
     (function() {
-        var slider = document.getElementById('compSlider');
+        const slider = document.getElementById('compSlider');
         if (!slider) return;
 
-        var afterImg = slider.querySelector('.slider-after');
-        var handle = document.getElementById('sliderHandle');
-        var isDragging = false;
+        const afterImg = slider.querySelector('.slider-after');
+        const handle = document.getElementById('sliderHandle');
+        let isDragging = false;
 
         function setPosition(clientX) {
-            var rect = slider.getBoundingClientRect();
-            var pct = ((clientX - rect.left) / rect.width) * 100;
-            if (pct < 2) pct = 2;
-            if (pct > 98) pct = 98;
+            const rect = slider.getBoundingClientRect();
+            let pct = ((clientX - rect.left) / rect.width) * 100;
+            pct = Math.max(2, Math.min(98, pct));
             afterImg.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
             handle.style.left = pct + '%';
         }
 
-        slider.addEventListener('pointerdown', function(e) {
+        slider.addEventListener('pointerdown', (e) => {
             isDragging = true;
             slider.setPointerCapture(e.pointerId);
             setPosition(e.clientX);
         });
 
-        slider.addEventListener('pointermove', function(e) {
+        slider.addEventListener('pointermove', (e) => {
             if (!isDragging) return;
             setPosition(e.clientX);
         });
 
-        slider.addEventListener('pointerup', function() {
+        slider.addEventListener('pointerup', () => {
             isDragging = false;
         });
 
-        slider.addEventListener('pointercancel', function() {
+        slider.addEventListener('pointercancel', () => {
             isDragging = false;
         });
     })();
@@ -2044,3 +1955,4 @@
 
 </body>
 </html>
+
