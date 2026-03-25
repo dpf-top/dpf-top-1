@@ -1186,6 +1186,43 @@
 
 
         /* ================================================================
+           IMPRESSUM
+           ================================================================ */
+        #impressum {
+            background: var(--bg-deep);
+        }
+
+        .impressum-content {
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .impressum-content h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .impressum-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .impressum-content a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        .impressum-content a:hover {
+            color: #66d4ff;
+        }
+
+
+        /* ================================================================
            FOOTER
            ================================================================ */
         .footer {
@@ -1756,7 +1793,7 @@
                     <div class="contact-info-icon"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
                     <div>
                         <div class="contact-info-label">Adresse</div>
-                        <div class="contact-info-value">Dresden</div>
+                        <div class="contact-info-value">Dresdner Str. 66, 01640 Coswig</div>
                     </div>
                 </div>
 
@@ -1833,6 +1870,35 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================
+     IMPRESSUM
+     ================================================================ -->
+<section class="section" id="impressum">
+    <div class="container">
+        <div class="section-header reveal">
+            <p class="section-label">Rechtliches</p>
+            <h2 class="section-title">Impressum</h2>
+        </div>
+
+        <div class="impressum-content reveal">
+            <h3>Angaben gemäß § 5 TMG</h3>
+            <p>
+                DPFtop<br>
+                Inh. Abdul Ahmed<br>
+                Dresdner Str. 66<br>
+                01640 Coswig
+            </p>
+
+            <h3>Kontakt</h3>
+            <p>
+                Telefon: <a href="tel:+4917641350025">+49 176 41350025</a><br>
+                E-Mail: <a href="mailto:info@dpftop.de">info@dpftop.de</a>
+            </p>
         </div>
     </div>
 </section>
